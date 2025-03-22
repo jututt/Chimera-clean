@@ -9,3 +9,5 @@ The duplicates exist across different subdirectories
 For each identified duplicate, the script prompts the user to confirm whether to delete all files in the directory containing the duplicate.
 If confirmed, the script deletes all files in the duplicate's directory. This ensures that not only the .apk file but also any related or additional files in the same subdirectory are removed.
 Afterward, if the directory becomes empty, it is cleaned up automatically.
+
+https://xdaforums.com/t/chimera-clean-cleans-data-user_de-0-com-google-android-gms-app_chimera-m-root-termux.4726513/
