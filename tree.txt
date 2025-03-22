@@ -1,0 +1,55 @@
+.
+├── 0000000f
+│   └── AdsDynamite.apk
+├── 0000005b
+│   └── MeasurementDynamite.apk
+├── 00000075
+│   └── CronetDynamite.apk
+├── 00000076
+│   └── DynamiteLoader.apk
+├── 00000102
+│   └── CronetDynamite.uncompressed.apk
+├── 00000111
+│   └── dl-TfliteDynamiteDynamite.integ_242327804100400.apk
+├── 00000176
+│   └── dl-AdsFdrDynamite.integ_243799204100000.apk
+├── 00000194
+│   └── DynamiteLoader.uncompressed.apk
+├── 000001ac
+│   └── dl-VisionBarcode.optional_245034100400.apk
+├── 000001ad
+│   └── dl-VisionFace.optional_245034100400.apk
+├── 000001ae
+│   └── dl-Antifingerprinting.optional_245034100000.apk
+├── 000001af
+│   └── dl-MlkitOcrCommon.optional_245034100400.apk
+├── 000001b2
+│   └── dl-Fastpair.optional_245034100000.apk
+├── 000001b3
+│   └── dl-BrellaDynamite.optional_245034100400.apk
+├── 000001b4
+│   └── dl-VisionOcr.optional_245034100000.apk
+├── 000001b5
+│   └── dl-Appsearch.optional_245034100400.apk
+├── 000001b6
+│   └── dl-MlkitBarcodeUi.optional_245034100400.apk
+├── 000001b8
+│   ├── dl-MapsCoreDynamite.integ_244625201100400.apk
+│   └── oat
+│       └── arm64
+│           ├── dl-MapsCoreDynamite.integ_244625201100400.odex
+│           └── dl-MapsCoreDynamite.integ_244625201100400.vdex
+├── 000001ba
+│   └── dl-PlayCloudSearch.optional_250335100000.apk
+├── 000001bb
+│   └── dl-Games.optional_250335100000.apk
+├── 000001c0
+│   ├── AdsDynamite.uncompressed.apk
+│   └── oat
+│       └── arm64
+│           ├── AdsDynamite.uncompressed.odex
+│           └── AdsDynamite.uncompressed.vdex
+└── c-0000000a-1723632297186
+    └── AndroidPlatformServices.apk -> /product/priv-app/PrebuiltGmsCore/m/independent/AndroidPlatformServices.apk
+
+26 directories, 26 files
