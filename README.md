@@ -1,5 +1,5 @@
 # Chimera-clean
-Cleans /data/user_de/0/com.google.android.gms/app_chimera/m [root][Termux]
+### Cleans /data/user_de/0/com.google.android.gms/app_chimera/m [root][Termux]
 
 File Discovery: The script scans the target directory and its subdirectories for all .apk files and organizes them by modification time. This ensures the latest version of each file is identified, regardless of its location in the directory hierarchy.
 Duplicate Identification:
