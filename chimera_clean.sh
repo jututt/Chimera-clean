@@ -41,7 +41,7 @@ for base in "${sorted_basenames[@]}"; do
         for duplicate_file in ${duplicates[$base]}; do
             duplicate_dir=$(basename "$(dirname "$duplicate_file")")
             rm "$duplicate_file"
-            echo "Deleted: $duplicate_dir/$(basename "$duplicate_file")"
+            echo "Deleted $duplicate_dir/$(basename "$duplicate_file")"
         done
     else
         echo "No duplicates found"
