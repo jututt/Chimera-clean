@@ -54,3 +54,6 @@ echo "Checking for empty directories..."
 find "$TARGET_DIR" -type d -empty -print -delete
 echo "Empty directories removed."
 
+echo
+cd $TARGET_DIR
+tree | tail -n 1; du -hs
