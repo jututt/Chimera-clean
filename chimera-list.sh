@@ -68,3 +68,7 @@ done < "$sorted_file"
 
 # Clean up
 rm "$TEMP_FILE" "$sorted_file"
+
+echo
+cd $TARGET_DIR
+tree | tail -n 1; du -hs
