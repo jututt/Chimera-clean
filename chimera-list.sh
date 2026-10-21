@@ -1,4 +1,4 @@
-#!/system_ext/bin/bash
+#!/data/data/com.termux/files/usr/bin/bash
 
 TARGET_DIR="/data/user_de/0/com.google.android.gms/app_chimera/m"  # Target directory
 TEMP_FILE="/data/local/tmp/file_map_debug.txt"  # Temporary file to store intermediate results
@@ -9,7 +9,15 @@ TEMP_FILE="/data/local/tmp/file_map_debug.txt"  # Temporary file to store interm
 # Find only .apk files in the target directory and process them silently
 find "$TARGET_DIR" -type f -name "*.apk" | while IFS= read -r file; do
   # Extract the base name (before '_')
-  base=$(basename "${file%_*}")
+  #base=$(basename "${file%_*}")
+  # Extract filename without path
+  fname=$(basename "$file")
+  # Extract the base name (strip everything after the first '_' or remove '.apk')
+  if [[ "$fname" == *_* ]]; then
+    base="${fname%%_*}"
+  else
+    base="${fname%.apk}"
+  fi
 
   # Get the relative path from the target directory
   relative_path="${file#$TARGET_DIR/}"
@@ -20,12 +28,13 @@ find "$TARGET_DIR" -type f -name "*.apk" | while IFS= read -r file; do
     mod_date="Unknown"  # Fallback if stat fails
   fi
 
-  # Fetch file size in bytes and convert to human-readable
-  file_size=$(stat -c '%s' "$file" 2>/dev/null)
-  if [ -z "$file_size" ]; then
-    file_size="Unknown"  # Fallback if stat fails
+  # Fetch file size in bytes and convert to human-readable MB
+  bytes=$(stat -c '%s' "$file" 2>/dev/null)
+  mb=$(( bytes / 1024 / 1024 ))
+  if [ "${bytes:-0}" -lt 10485760 ]; then
+    file_size="${mb}.$(( bytes * 10 / 1024 / 1024 % 10 ))MB"
   else
-    file_size=$(numfmt --to=iec --format="%.1f" "$file_size")  # Convert size to human-readable
+    file_size="${mb}MB"
   fi
 
   # Write to the temp file: base|relative_path|mod_date|file_size
