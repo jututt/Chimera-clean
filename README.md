@@ -11,6 +11,11 @@ For each identified duplicate, the script deletes all files in the directory con
 
 https://xdaforums.com/t/chimera-clean-cleans-data-user_de-0-com-google-android-gms-app_chimera-m-root-termux.4726513/
 
-UPDATE 2026-11: after a Vending data clean, a new path has been found for Chimera modules: `/data/data/com.android.vending/cache/installercache/com.google.android.gms/264432029`
+ 
+
+### UPDATE 2026-11:
+after a Vending data clean, a new path has been found for Chimera modules: `/data/data/com.android.vending/cache/installercache/com.google.android.gms/[timestamp]/`
+
 This is a much better approach, every update is packed in its own dir, so you can keep only the latest and delete older to keep the bloat in check.
+
 Old `user_de` path my script is pointing to seems now deprecated and stays empty.
